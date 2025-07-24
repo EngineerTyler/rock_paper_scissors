@@ -24,20 +24,26 @@ function playRound(humanChoice, computerChoice){
     let CC_length = computerChoice.length
     if (HC_length == CC_length) {                          // Tie logic
         console.log("Tie!")
+        return
     } else if (HC_length > CC_length && HC_length < 6){    // Paper > Rock
         console.log("You win! Paper beats Rock!");
         humanScore++
+        return
     } else if (HC_length < CC_length && CC_length != 5){   // Rock > Scissors
         console.log("You win! Rock beats Scissors!");
         humanScore++
+        return
     } else if (HC_length > CC_length && CC_length != 4){   // Scissors > Paper
         console.log("You win! Scissors beats Paper!");
         humanScore++
+        return
     } else {
         console.log("You're a LOSER! " + computerChoice + " beats " + humanChoice + ".");
         computerScore++
+        return
     }
 }
+
 // "5" Rounds
 function playGame(){
     for (let i = 0; i < 5; i++) {
