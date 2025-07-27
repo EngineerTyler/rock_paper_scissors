@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROCK PAPER SCISSORS</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tech font -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">ROCK PAPER SCISSORS</h1>
-    </header>
+  <header class="header">
+    <h1 class="title">ROCK PAPER SCISSORS</h1>
+  </header>
 
-    <!-- RPS buttons -->
-    <button class="rockBtn">Rock</button>
-    <button class="paperBtn">Paper</button>
-    <button class="scissorsBtn">Scissors</button>
+  <!-- RPS Buttons -->
+  <button class="rockBtn">Rock</button>
+  <button class="paperBtn">Paper</button>
+  <button class="scissorsBtn">Scissors</button>
 
-    <!-- Scoreboard -->
-    <div class="scoreBoard">
-        <p class="roundCount">Round 0</p>
-        <p class="playerScoreCount">Player: 0</p>
-        <p class="computerScoreCount">Computer: 0</p>
-    </div>
+  <!-- Scoreboard -->
+  <div class="scoreBoard">
+    <p class="round-count">Round 0</p>
+    <p class="player-scorecount">Player: 0</p>
+    <p class="computer-scorecount">Computer: 0</p>
+  </div>
 
-    <script src="rockpaperscissors.js">
-    </script>
+  <!-- Results Message -->
+  <div class="result-message" id="resultMessage"></div>
+
+  <!-- Effects Container -->
+  <div class="rocket-container" id="rocketContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="rockpaperscissors.js"></script>
 </body>
 </html>
