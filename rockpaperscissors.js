@@ -1,56 +1,48 @@
 //Computer random logic for rock, papers, scissors
 
-// Computer Choice
-function getComputerChoice(){
-    let RPC = ["Rock","Paper","Scissors"];              // RPC choice
-    let random = Math.floor(Math.random()*3);           // Random number gen.
-    let computerChoice = RPC[random];                        // Select random RPC
-    return computerChoice
-}
-// Human Choice
-function getHumanChoice(){                              // Human Choice
-    let humanChoice = prompt("Choose Rock, Papers or Scissors");
-    humanChoice = humanChoice.toUpperCase().at(0) + humanChoice.slice(1).toLowerCase();
-    return humanChoice
-}
-
 // Initialize Scoring
 let humanScore = 0;
 let computerScore = 0;
 
-// Game
+// Computer Choice
+function getComputerChoice(){
+    let RPC = ["Rock","Paper","Scissors"];
+    let random = Math.floor(Math.random()*3);
+    let computerChoice = RPC[random];
+    return computerChoice
+}
+
+// Human Choice
+function getHumanChoice(humanChoice){
+    humanChoice = humanChoice.toUpperCase().at(0) + humanChoice.slice(1).toLowerCase();
+    return humanChoice
+}
+
+// RPS Rounds
 function playRound(humanChoice, computerChoice){
-    let HC_length = humanChoice.length
-    let CC_length = computerChoice.length
-    if (HC_length == CC_length) {                          // Tie logic
+    if (humanChoice == computerChoice) {    // Tie
         console.log("Tie!")
         return
-    } else if (HC_length > CC_length && HC_length < 6){    // Paper > Rock
-        console.log("You win! Paper beats Rock!");
+    } else if (humanChoice == "Paper" && computerChoice == "Rock" || // Human wins
+               humanChoice == "Rock" && computerChoice == "Scissors" ||
+               humanChoice == "Scissors" && computerChoice == "Paper"){
+        console.log("You Win! " + humanChoice + " beats " + computerChoice + ".");
         humanScore++
-        return
-    } else if (HC_length < CC_length && CC_length != 5){   // Rock > Scissors
-        console.log("You win! Rock beats Scissors!");
-        humanScore++
-        return
-    } else if (HC_length > CC_length && CC_length != 4){   // Scissors > Paper
-        console.log("You win! Scissors beats Paper!");
-        humanScore++
-        return
+        return 
     } else {
-        console.log("You're a LOSER! " + computerChoice + " beats " + humanChoice + ".");
+        console.log("You Lose! " + computerChoice + " beats " + humanChoice + "."); // Computer wins
         computerScore++
         return
     }
 }
 
-// "5" Rounds
-function playGame(){
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(),getComputerChoice());
-        console.log("Human: " + humanScore + " vs Computer: " + computerScore);
-    }
-}
+// UI
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorsBtn = document.querySelector("#scissorsBtn");
 
+rockBtn.addEventListener("click", () => {getHumanChoice("rock")});
+paperBtn.addEventListener("click", () => {getHumanChoice("paper")});
+scissorsBtn.addEventListener("click", () => {getHumanChoice("scissors")});
 
-playGame()
+//Play Game
