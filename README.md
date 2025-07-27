@@ -1,2 +1,4 @@
 # rock_paper_scissors
-Rock, Paper, Scissors Game
+Rocket-themed Rock, Paper, Scissors Game 
+
+My first coding project to practice HTML, CSS, JavaScript, Linux and GITHUB.
