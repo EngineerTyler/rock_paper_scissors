@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors
 Rock, Paper, Scissors game 
-* [DEMO] (https://engineertyler.github.io/rock_paper_scissors/)
+* [DEMO](https://engineertyler.github.io/rock_paper_scissors/)
 
 ### Purpose
 * Rocket-themed Rock, Paper, Scissors Game 
