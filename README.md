@@ -1,5 +1,5 @@
 # Rock-Paper-Scissors
-Etch-a-Sketch game 
+Rock, Paper, Scissors game 
 * [DEMO] (https://tchau8.github.io/rock_paper_scissors/)
 
 ### Purpose
