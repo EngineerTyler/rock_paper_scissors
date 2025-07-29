@@ -1,6 +1,23 @@
-# rock_paper_scissors
-Rocket-themed Rock, Paper, Scissors Game 
+# Rock-Paper-Scissors
+Etch-a-Sketch game 
+* [DEMO] (https://tchau8.github.io/rock_paper_scissors/)
 
-My first coding project to practice HTML, CSS, JavaScript, Linux and GITHUB.
+### Purpose
+* Rocket-themed Rock, Paper, Scissors Game 
 
-[DEMO](https://tchau8.github.io/rock_paper_scissors/)
+### Outcome
+* Improve knowledge of Javascript, HTML, CSS
+* Write cleaner code
+* Become familiar with GitHub main and branches
+* Implement best-practices
+
+### Languages: 
+* HTML
+* CSS
+* JavaScript
+
+### Tools:
+* VSC
+* Linux
+* GitHub
+
